@@ -11,5 +11,5 @@ echo fb.com | ./bulk-ping.sh
 ```
 ## For Bulk targets input from a file
 ```
-cat <filename> |./bulk-ping.sh
+cat <filename> | ./bulk-ping.sh
 ```
