@@ -54,7 +54,7 @@ do
     echo -e "\033[0;92m  [+] node [$output] is \033[0;92m up \033[0;92m "
     echo -e "\033[0m "
     else
-    echo -e "\033[0;91m  [-] node $output is \033[0;91m down \033[0;91m "
+    echo -e "\033[0;91m  [-] node [$output] is \033[0;91m down \033[0;91m "
     echo -e " \033[0m "
     fi
 done
