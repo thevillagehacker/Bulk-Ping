@@ -28,7 +28,7 @@ echo """
 #Date
 printf "\033[1;93m"
 now="$(date)"
-echo -e "\e[102m\033[1;97m Date: "$now"\033[0;37m"
+echo -e "\e[45m\033[1;97m Date: "$now"\033[0;37m"
 echo -e "   "
 echo -e "\e[41m\033[1;97m Initiating Ping probe... \033[0;37m"
 echo -e "   "
