@@ -45,7 +45,7 @@ do
     echo -e "\e[102m\033[1;97m [+] node [$output] is up \033[0;37m"
     echo " "
     else
-    echo -e "\e[102m\033[1;97m [-] node [$output] is down \033[0;37m"
+    echo -e "\e[5m\e[102m\033[1;97m [-] node [$output] is down \033[0;37m"
     echo " "
     fi
 done
