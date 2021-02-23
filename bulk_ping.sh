@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # version
-version=1.0
+version=1.1
 
 # banner
 echo """
@@ -12,59 +12,41 @@ echo """
 ██████╦╝╚██████╔╝███████╗██║░╚██╗  ██║░░░░░██║██║░╚███║╚██████╔╝
 ╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝╚═╝░░╚══╝░╚═════╝░
                 
-                By
-                
-  _|_|_  _   .|| _  _  _ |_  _  _|  _  _
-   | | |(/_\/|||(_|(_|(/_| |(_|(_|<(/_| 
-                    _|                  
-          ------------------          
-       ~ |Do Hacks to Secure| ~
-          ------------------
-    https://twitter.com/thevillagehackr
+                        By
+                        
+          _|_|_  _   .|| _  _  _ |_  _  _|  _  _
+           | | |(/_\/|||(_|(_|(/_| |(_|(_|<(/_| 
+                            _|                  
+                  ------------------          
+               ~ |Do Hacks to Secure| ~
+                  ------------------
+            https://twitter.com/thevillagehackr
 
-      Hey don't miss this version $version
+              Hey don't miss this version $version
 
     """
-
-#spinner
-spinner ()
-{
-    bar="+++++++++++++++++++++++++++++++++++++++++++"
-    barlength=${#bar}
-    i=0
-    while ((i <100)); do
-        n=$((i*barlength / 100))
-        printf "\033[1;95m\r%-${bar}s\e[00m" "${bar:0:n}"
-        ((i += RANDOM%5+2))
-        sleep 0.01
-        printf " "
-    done  
-    printf "\n"
-}
 
 #Date
 printf "\033[1;93m"
 now="$(date)"
-echo "Date: "$now""
-printf "\033[0m"
-
-#calling spinner
+echo -e "\e[102m\033[1;97m Date: "$now"\033[0;37m"
 echo -e "   "
-echo "Initiating Ping request to all Targets"
+echo -e "\e[41m\033[1;97m Initiating Ping probe... \033[0;37m"
 echo -e "   "
-spinner
-sleep 0.01
+sleep 0.5
 
 #check file and get data to ping
 cat $1 |  while read output
 do
+    echo -e "\e[40m\033[1;97m Sending Ping request to \e[105m\033[1;97m [$output] \033[0;37m"
+    echo "---------------------------------------------------"
     ping -c 1 "$output" > /dev/null
     if [ $? -eq 0 ]; then
-    echo -e "\033[0;92m  [+] node [$output] is \033[0;92m up \033[0;92m "
-    echo -e "\033[0m "
+    echo -e "\e[102m\033[1;97m [+] node [$output] is up \033[0;37m"
+    echo " "
     else
-    echo -e "\033[0;91m  [-] node [$output] is \033[0;91m down \033[0;91m "
-    echo -e " \033[0m "
+    echo -e "\e[102m\033[1;97m [-] node [$output] is down \033[0;37m"
+    echo " "
     fi
 done
-echo "All done"
+echo -e "\e[45m\033[1;97m All done \033[0;37m"
