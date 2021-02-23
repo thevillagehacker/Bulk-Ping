@@ -23,7 +23,6 @@ echo """
             https://twitter.com/thevillagehackr
 
               Hey don't miss this version $version
-
     """
 
 #Date
