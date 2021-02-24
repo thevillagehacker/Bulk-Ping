@@ -73,7 +73,6 @@ echo -e "\e[45m\033[1;97m All done \033[0;37m"
 # Validate input
 if [ $# -eq 0 ]
 then
-    echo " "
     echo -e "\e[5m\e[41m\033[1;97m No target files supplied \033[0;37m"
     exit -1
 else
