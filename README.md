@@ -15,4 +15,5 @@ echo target.com | ./bulk-ping.sh
 ./bulk-ping.sh <filename>
 ```
 
-
+## video Example
+[![asciicast](https://asciinema.org/a/MADaRtZzdlBSC68x0cm5p3yrD.svg)](https://asciinema.org/a/MADaRtZzdlBSC68x0cm5p3yrD)
