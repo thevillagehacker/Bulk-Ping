@@ -37,7 +37,7 @@ sleep 0.5
 #check file and get data to ping
 cat $1 |  while read output
 do
-    echo -e "\e[40m\033[1;97m Sending Ping request to \e[105m\033[1;97m [$output] \033[0;37m"
+    echo -e "\e[40m\033[1;97m Sending Ping request to \e[105m\033[1;97m $output \033[0;37m"
     echo "---------------------------------------------------"
     ping -c 1 "$output" > /dev/null
     if [ $? -eq 0 ]; then
