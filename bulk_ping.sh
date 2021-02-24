@@ -11,13 +11,13 @@ echo """
 ██╔══██╗██║░░░██║██║░░░░░██╔═██╗░  ██╔═══╝░██║██║╚████║██║░░╚██╗
 ██████╦╝╚██████╔╝███████╗██║░╚██╗  ██║░░░░░██║██║░╚███║╚██████╔╝
 ╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝  ╚═╝░░░░░╚═╝╚═╝░░╚══╝░╚═════╝░
-                
+
                         By
-                        
+
           _|_|_  _   .|| _  _  _ |_  _  _|  _  _
-           | | |(/_\/|||(_|(_|(/_| |(_|(_|<(/_| 
-                            _|                  
-                  ------------------          
+           | | |(/_\/|||(_|(_|(/_| |(_|(_|<(/_|
+                            _|
+                  ------------------
                ~ |Do Hacks to Secure| ~
                   ------------------
             https://twitter.com/thevillagehackr
@@ -37,15 +37,22 @@ sleep 0.5
 #check file and get data to ping
 cat $1 |  while read output
 do
-    echo -e "\e[40m\033[1;97m Sending ping request to \e[105m\033[1;97m [$output] \033[0;37m"
+    echo -e "\e[40m\033[1;97m Sending Ping request to \e[105m\033[1;97m [$output] \033[0;37m"
     echo "---------------------------------------------------"
     ping -c 1 "$output" > /dev/null
     if [ $? -eq 0 ]; then
-    echo -e "\e[102m\033[1;97m [+] node [$output] is up \033[0;37m"
+    echo -e "\e[102m\033[1;97m [+] node [$output] is up \033[0;37m" 
+    echo "$output" >>tmp1.txt
+    cat tmp1.txt | sort -u >up.txt
     echo " "
     else
     echo -e "\e[5m\e[41m\033[1;97m [-] node [$output] is down \033[0;37m"
+    echo "$output" >>tmp2.txt
+    cat tmp2.txt | sort -u >down.txt
     echo " "
     fi
 done
+echo -e "\e[102m\033[1;97m Removing Temporary files...\033[0;37m"
+rm tmp1.txt tmp2.txt
+echo " "
 echo -e "\e[45m\033[1;97m All done \033[0;37m"
