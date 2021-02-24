@@ -52,7 +52,7 @@ do
     echo " "
     fi
 done
-echo -e "\e[102m\033[1;97m Removing Temporary files...\033[0;37m"
+echo -e "\e[102m\033[1;97m Removed Temporary files...\033[0;37m"
 rm tmp1.txt tmp2.txt
 echo " "
 echo -e "\e[45m\033[1;97m All done \033[0;37m"
