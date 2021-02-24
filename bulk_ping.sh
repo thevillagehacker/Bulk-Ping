@@ -32,9 +32,9 @@ echo -e "\e[45m\033[1;97m Date: "$now"\033[0;37m"
 echo -e "   "
 
 # Initiation bar
-init_bar() {
-    BAR='Initiating Ping probe...'  
-    for i in {1..24}; do
+BAR='Initiating Ping probe...'
+init_bar() {  
+    for i in {1..30}; do
         echo -ne "\e[41m\033[1;97m \r${BAR:0:$i} \033[0;37m" 
         sleep 0.01                 
     done
