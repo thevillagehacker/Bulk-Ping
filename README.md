@@ -1,5 +1,5 @@
 # Bulk-Ping
-A Bash Script to ping single and Multiple Targets from file.
+A tool made in bash to ping Multiple Targets from file and output the results in separate files.
 
 # Usage 
 ```sh
