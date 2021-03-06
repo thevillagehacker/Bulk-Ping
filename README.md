@@ -12,4 +12,4 @@ chmod +x bulk_ping.sh
 ```
 
 ## video Example
-
+[![asciicast](https://asciinema.org/a/FStj1uE0XvdKD1NOfvAVEGDtQ.svg)](https://asciinema.org/a/FStj1uE0XvdKD1NOfvAVEGDtQ)
