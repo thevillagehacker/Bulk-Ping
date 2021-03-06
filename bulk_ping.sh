@@ -54,7 +54,7 @@ Ping ()
     echo "---------------------------------------------------"
     ping -c 1 "$output" > /dev/null
     if [ $? -eq 0 ]; then
-    echo -e "\e[102m\033[1;97m [+] node [$output] is up \033[0;37m" 
+    echo -e "\e[42m\033[1;97m [+] node [$output] is up \033[0;37m" 
     echo "$output" >>bpingresults/tmp1.txt
     cat bpingresults/tmp1.txt | sort -u >bpingresults/up.txt
     echo " "
