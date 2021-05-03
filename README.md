@@ -8,8 +8,6 @@ chmod +x bulk_ping.sh
 
 ## For Bulk targets input from a file
 ```
-./bulk-ping.sh <filename>
+./bulk-ping.sh -f <filename>
 ```
 
-## video Example
-[![asciicast](https://asciinema.org/a/FStj1uE0XvdKD1NOfvAVEGDtQ.svg)](https://asciinema.org/a/FStj1uE0XvdKD1NOfvAVEGDtQ)
