@@ -6,7 +6,7 @@ A tool made in bash to ping Multiple Targets from file and output the results in
 chmod +x bulk_ping.sh
 ```
 
-## For Bulk targets input from a file
+## Ping Bulk targets from a file
 ```
 ./bulk-ping.sh -f <filename>
 ```
