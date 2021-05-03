@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # version
-version=1.2
+version=2.0
 
 # banner
 echo """
@@ -47,7 +47,6 @@ echo " "
 #check file and get data to ping
 Ping ()
 {
-  mkdir results
   cat $tar |  while read output
   do
     echo -e "\e[40m\033[1;97m Sending Ping request to \e[105m\033[1;97m $output \033[0;37m"
@@ -72,6 +71,7 @@ echo " "
 echo -e "\e[45m\033[1;97m All done \033[0;37m"
 }
 
+<<EOF
 # Validate input
 if [ $# -eq 0 ]
 then
@@ -81,3 +81,13 @@ else
     tar=$1
     Ping
 fi
+EOF
+
+if [ "$1" = "-f" ]; then
+  tar=$2
+  Ping
+else
+  echo -e "\e[5m\e[41m\033[1;97m No target files supplied \033[0;37m"
+  exit -1
+fi
+
