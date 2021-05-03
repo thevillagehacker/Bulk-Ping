@@ -71,18 +71,8 @@ echo " "
 echo -e "\e[45m\033[1;97m All done \033[0;37m"
 }
 
-<<EOF
-# Validate input
-if [ $# -eq 0 ]
-then
-    echo -e "\e[5m\e[41m\033[1;97m No target files supplied \033[0;37m"
-    exit -1
-else
-    tar=$1
-    Ping
-fi
-EOF
 
+# Validate input
 if [ "$1" = "-f" ]; then
   tar=$2
   Ping
